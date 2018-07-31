@@ -1,0 +1,270 @@
+/**
+ * Black theme for reveal.js. This is the opposite of the 'white' theme.
+ *
+ * Copyright (C) 2015 Hakim El Hattab, http://hakim.se
+ */
+
+ // This file has been copied over from
+ // ../../bower_components/reveal.js/css/theme/source/black.scss
+
+ // See ../../bower_components/reveal.js/css/theme/README.md
+ // for further explanations on how to create a custom reveal.js theme.
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(../../../lib/font/source-sans-pro/source-sans-pro.css);
+@import url(../../../lib/font/lato/lato.css);
+
+// Override theme settings (see ../../bower_components/reveal.js/css/theme/template/settings.scss)
+$backgroundColor: #222;
+
+$mainColor: #fff;
+$headingColor: #86A831;
+
+$mainFont: 'Lato', 'Source Sans Pro', Helvetica, sans-serif;
+$headingFont: 'Lato', 'Source Sans Pro', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: none;
+$headingFontWeight: 400;
+$headingMargin: 15px 0 8px;
+$linkColor: #42affa;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$mainFontSize: 28px;
+$heading1Size: 3.77em;
+$heading2Size: 2.11em;
+$heading3Size: 1.1em;
+$heading4Size: 1em;
+
+$selectionBackgroundColor: #FF601E;
+$selectionColor: #fff;
+
+section.has-light-background {
+    &, h1, h2, h3, h4, h5, h6 {
+        color: #222;
+    }
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(/resources/midsummer-thin.svg);
+    background-color: $backgroundColor;
+    background-position: 97% 4%;
+    background-repeat: no-repeat;
+    background-size: 6vw, auto;
+    line-height: 1.3;
+}
+
+.reveal {
+    sub, sup {
+        font-size: 75%;
+    }
+
+    font-weight: 300;
+
+    .slides {
+        text-align: left;
+    }
+
+    h1 {
+        color: #FF601E;
+        margin-top: 0.6em;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 200;
+    }
+
+    h2 {
+        font-weight: 200;
+    }
+
+    h3, th {
+        color: #FF601E;
+    }
+
+    table {
+        font-size: 85%;
+    }
+
+    pre {
+        font-size: 0.8em;
+        margin: 1rem 0;
+        width: auto;
+
+        code {
+            max-height: none;
+            padding: 0.4em 0.8em;
+        }
+    }
+
+    .has-light-background pre code {
+        background-color: #f5f5c0;
+        color: #444;
+    }
+
+    .has-light-background h1,
+    .has-light-background h2,
+    .has-light-background h3 {
+        color: #36a3ef;
+    }
+
+    hr {
+        border-color: #abb2bf;
+        border-width: 2px;
+        border-style: solid;
+    }
+
+    img.plain {
+        background: none;
+    }
+
+    .left {
+        display: block;
+        float: left;
+        width: 50%;
+    }
+
+    .right {
+        display: block;
+        float: right;
+        width: 50%;
+    }
+
+    .main-logo {
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 25vw;
+        height: 25vw;
+        margin: 0 auto;
+    }
+
+    .angular-logo {
+        @extend .main-logo;
+        background-image: url(/resources/angular.svg);
+    }
+
+    .typescript-logo {
+        @extend .main-logo;
+        width: 60vw;
+        margin-top: 5em;
+        background-image: url(/resources/typescript.svg);
+    }
+
+    .pipe-logo {
+        @extend .main-logo;
+        width: 20vw;
+        margin-top: 5em;
+        background-image: url(https://upload.wikimedia.org/wikipedia/en/b/b9/MagrittePipe.jpg);
+    }
+
+    .warning {
+        color: #f84;
+    }
+
+    .highlight {
+        color: #42affa;
+    }
+
+    .xx-large {
+        font-size: 400%;
+    }
+
+    .callback {
+        color: #fff !important;
+        background: #48f;
+        display: inline-block;
+        border-radius: 1000px;
+        position: relative;
+        top: -0.4em;
+        font-size: 80%;
+        padding: 0.2em 0.4em;
+        line-height: 1;
+    }
+
+    .callback * {
+        color: #fff !important;
+    }
+
+    .filename {
+        border-radius: 1rem 1rem 0 0;
+        color: #222;
+        font-size: 60%;
+        background: #99a0af;
+        margin-bottom: -1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    figure {
+        text-align: center;
+    }
+
+    .attribution {
+        color: #888;
+        font-size: 60%;
+        font-style: italic;
+    }
+
+    .block {
+        background-color: #282c34;
+        overflow: hidden;
+        border-radius: 2rem;
+        margin: 0 0 1.6rem;
+    }
+
+    .block-header {
+        margin: 0;
+        padding: 0.8rem 2rem 0.8rem;
+        background-color: #4C679B;
+        color: #222;
+        font-size: 80%;
+        font-style: italic;
+    }
+
+    .block-content {
+        padding: 0 2rem 1rem;
+    }
+
+    .row {
+        clear: both;
+        margin: 1em -0.5em;
+    }
+
+    .row::after {
+        content: "";
+        display: inline-block;
+        clear: both;
+    }
+
+    .col-4 {
+        padding: 0 0.5em;
+        width: 33.33333%;
+        float: left;
+        min-height: 1px;
+    }
+
+    .sandboxRoot {
+        background: #99a0af !important;
+        font-size: 60%;
+        color: #222;
+    }
+
+    .operatorBox {
+        background-color: #282c34;
+        color: #fff;
+    }
+}
+
